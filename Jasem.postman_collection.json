@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "4afa5338-efca-4e2c-8847-24b4ea906323",
+		"name": "Jasem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9348643"
+	},
+	"item": [
+		{
+			"name": "Wizkids",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "jasem@email.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345qwert",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "boss1@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin_password",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login with token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "token",
+									"value": "kRaQGTKMOrF4Lant4Pxn4TdTl6u6Zyi59eKVY4OF",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/login-token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"login-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new wizkid/Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jasem",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@test.coms",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "developer",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"value": "https://www.nicesnippets.com/blog/laravel-validation-for-url-example",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "-123456444",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/addWizkid",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"addWizkid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update wizkid/user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jasem",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jasem@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "abcd1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "developer",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"value": "https://www.nicesnippets.com/blog/laravel-validation-for-url-example",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/updateWizkid",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"updateWizkid"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fire wizkid/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "rstehr@example.org",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/fire",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"fire"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UnFire wizkid/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "rstehr@example.org",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/unFire",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"unFire"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All wizkids/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/wizkids",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"wizkids"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search wizkids/user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/searchWizkid?q=boss&role=boss",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"searchWizkid"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "boss"
+								},
+								{
+									"key": "role",
+									"value": "boss"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete wizkid/user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "clara88@example.net",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/deleteWizkid",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"deleteWizkid"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost/jasemOWOW/public"
+		},
+		{
+			"key": "token",
+			"value": "r0MLWIUN5ZERPzPZV6jov2YbGh0HAGKlmK5VLZc9"
+		}
+	]
+}
