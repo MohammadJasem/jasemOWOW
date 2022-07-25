@@ -1,4 +1,4 @@
-# Tweeter Clone
+# Wizkid Clone
 
 
 ### Installation (first time)
