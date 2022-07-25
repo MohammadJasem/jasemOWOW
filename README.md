@@ -35,4 +35,4 @@
 - Email: `boss1@admin.com`
 - Password: `admin_password`
 
-### For the APIs, you can import the file (`wizkid.postman_collection.json`) to postman and test the APIs
+### For the APIs, you can import the file (`Jasem.postman_collection`) to postman and test the APIs
